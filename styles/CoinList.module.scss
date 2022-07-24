@@ -1,0 +1,23 @@
+@import "./variables";
+
+.container {
+  display: grid;
+  max-width: $contentContainerWidth;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+
+  @media (max-width: $md1) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 60px;
+  }
+
+  @media (max-width: $md2) {
+    grid-column-gap: 20px;
+  }
+
+  @media (max-width: $md3) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
